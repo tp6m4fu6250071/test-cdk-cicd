@@ -1,9 +1,14 @@
 -e .
-aws_cdk.core
-aws_cdk.aws_codedeploy
-aws_cdk.aws_lambda 
-aws_cdk.aws_codebuild 
-aws_cdk.aws_codepipeline
-aws_cdk.aws_codecommit 
-aws_cdk.aws_codepipeline_actions 
-aws_cdk.aws_s3
+boto3
+aws_cdk.core==1.45.0
+aws-cdk.cdk-assets-schema==1.45.0
+aws-cdk.cloud-assembly-schema==1.45.0
+aws_cdk.app_delivery==1.45.0
+aws_cdk.aws_codedeploy==1.45.0
+aws_cdk.aws_lambda==1.45.0
+aws_cdk.aws_codebuild==1.45.0
+aws_cdk.aws_codepipeline==1.45.0
+aws_cdk.aws_codecommit==1.45.0
+aws_cdk.aws_codepipeline_actions==1.45.0
+aws_cdk.aws_s3==1.45.0
+aws-cdk.assets==1.45.0
