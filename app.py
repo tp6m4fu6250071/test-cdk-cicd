@@ -42,10 +42,10 @@ pipeline.add_stage(
 
 project = codebuild.PipelineProject(pipeline_stack, "CodeBuild",
     environment_variables = {
-        "LAMBDA_CODE_BUCKET": codebuild.BuildEnvironmentVariable(LAMBDA_CODE_BUCKET),
-        "CODE_PATH": codebuild.BuildEnvironmentVariable(CODE_PATH),
-        "LAMBDA_FUNCTION_FILENAME_A": codebuild.BuildEnvironmentVariable(LAMBDA_FUNCTION_FILENAME_A),
-        "LAMBDA_FUNCTION_FILENAME_B": codebuild.BuildEnvironmentVariable(LAMBDA_FUNCTION_FILENAME_B)
+        "LAMBDA_CODE_BUCKET": codebuild.BuildEnvironmentVariable(value=LAMBDA_CODE_BUCKET),
+        "CODE_PATH": codebuild.BuildEnvironmentVariable(value=CODE_PATH),
+        "LAMBDA_FUNCTION_FILENAME_A": codebuild.BuildEnvironmentVariable(value=LAMBDA_FUNCTION_FILENAME_A),
+        "LAMBDA_FUNCTION_FILENAME_B": codebuild.BuildEnvironmentVariable(value=LAMBDA_FUNCTION_FILENAME_B)
 
     }
 )
