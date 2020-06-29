@@ -7,13 +7,6 @@ from aws_cdk import (
 )
 import boto3
 
-'''
-CODE_PATH = './hello/lambda_code/'
-LAMBDA_CODE_FILE_NAME = 'lambda_function_a'
-LAMBDA_CODE_FILE_EXT = 'py'
-LAMBDA_CODE_BUCKET = 'testhomework'
-'''
-
 class MyServiceStackA(core.Stack):
 
     def __init__(self, scope: core.Construct, id: str, code_path, lambda_code_file, lambda_code_bucket_name, **kwargs) -> None:

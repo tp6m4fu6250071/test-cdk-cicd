@@ -12,3 +12,4 @@ aws_cdk.aws_codecommit==1.45.0
 aws_cdk.aws_codepipeline_actions==1.45.0
 aws_cdk.aws_s3==1.45.0
 aws-cdk.assets==1.45.0
+aws-cdk.aws_iam==1.45.0

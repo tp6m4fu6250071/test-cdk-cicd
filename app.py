@@ -9,6 +9,7 @@ import aws_cdk.aws_codebuild as codebuild
 import aws_cdk.aws_codepipeline as codepipeline
 import aws_cdk.aws_codepipeline_actions as codepipeline_actions
 import aws_cdk.app_delivery as cicd
+import aws_cdk.aws_iam as iam
 
 CODE_PATH = './hello/lambda_code/'
 LAMBDA_CODE_BUCKET = 'testhomework'
@@ -80,6 +81,26 @@ deploy_service_bAction = cicd.PipelineDeployStackAction(
     execute_change_set_action_name = 'ExecuteB'
 )
 deploy_stage.add_action(deploy_service_bAction)
+
+### for no Assets workaround, I need to add the permission for CodeBuild service role to access my bucket. Otherwise, CodeBuild could not put my lambda code while running "cdk synth" command in the build project.
+myS3AccessPolicy = iam.Policy(pipeline_stack, "MyS3AccessPolicy", 
+    roles = [
+        pipeline.node.try_find_child('build').node.try_find_child('CodeBuild').node.try_find_child('CodePipelineActionRole')
+    ]
+).add_statements(
+    iam.PolicyStatement(
+        actions = [
+            's3:*'
+        ],
+        effect = iam.Effect.ALLOW,
+        resources = [
+            'arn:aws:s3:::'+LAMBDA_CODE_BUCKET,
+            'arn:aws:s3:::'+LAMBDA_CODE_BUCKET+'/*'
+        ] # arn:aws:s3:::bucket_name/key_name
+    )
+)
+
+### Debugging (print out the object's information to see what can I do.)
 '''
 for obj in pipeline.node.find_all():
     print(obj)
@@ -89,8 +110,12 @@ for obj in pipeline.node.find_all():
     except:
         pass
     print('-------------------')
-# CdkPipelineStack.CodePipeline.source.GitHub.WebhookResource.LogicalID 51
-print(((pipeline.node.try_find_child('source')).node.try_find_child('GitHub')).node.try_find_child('WebhookResource'))
-print(dir(((pipeline.node.try_find_child('source')).node.try_find_child('GitHub')).node.try_find_child('WebhookResource')))
 '''
+# CdkPipelineStack.CodePipeline.build.CodeBuild.CodePipelineActionRole.Resource.LogicalID.78
+# print(pipeline.node.try_find_child('build').node.try_find_child('CodeBuild').node.try_find_child('CodePipelineActionRole'))
+# CdkPipelineStack.CodePipeline.source.GitHub.WebhookResource.LogicalID.51
+#print(((pipeline.node.try_find_child('source')).node.try_find_child('GitHub')).node.try_find_child('WebhookResource'))
+#print(dir(((pipeline.node.try_find_child('source')).node.try_find_child('GitHub')).node.try_find_child('WebhookResource')))
+
+
 app.synth()
