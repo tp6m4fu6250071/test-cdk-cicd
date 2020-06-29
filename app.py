@@ -38,6 +38,25 @@ pipeline.add_stage(
 )
 
 project = codebuild.PipelineProject(pipeline_stack, "CodeBuild")
+### for no Assets workaround, I need to add the permission for CodeBuild service role to access my bucket. Otherwise, CodeBuild could not put my lambda code while running "cdk synth" command in the build project.
+myS3AccessPolicy = iam.Policy(pipeline_stack, "MyS3AccessPolicy",
+    roles = [
+        project.role
+    ]
+).add_statements(
+    iam.PolicyStatement(
+        actions = [
+            's3:*'
+        ],
+        effect = iam.Effect.ALLOW,
+        resources = [
+            'arn:aws:s3:::'+LAMBDA_CODE_BUCKET,
+            'arn:aws:s3:::'+LAMBDA_CODE_BUCKET+'/*'
+        ] # arn:aws:s3:::bucket_name/key_name
+    )
+)
+### End of this no Assets workaround
+
 synthesized_app = codepipeline.Artifact()
 build_action = codepipeline_actions.CodeBuildAction(
     action_name="CodeBuild",
@@ -81,24 +100,6 @@ deploy_service_bAction = cicd.PipelineDeployStackAction(
     execute_change_set_action_name = 'ExecuteB'
 )
 deploy_stage.add_action(deploy_service_bAction)
-
-### for no Assets workaround, I need to add the permission for CodeBuild service role to access my bucket. Otherwise, CodeBuild could not put my lambda code while running "cdk synth" command in the build project.
-myS3AccessPolicy = iam.Policy(pipeline_stack, "MyS3AccessPolicy", 
-    roles = [
-        pipeline.node.try_find_child('build').node.try_find_child('CodeBuild').node.try_find_child('CodePipelineActionRole')
-    ]
-).add_statements(
-    iam.PolicyStatement(
-        actions = [
-            's3:*'
-        ],
-        effect = iam.Effect.ALLOW,
-        resources = [
-            'arn:aws:s3:::'+LAMBDA_CODE_BUCKET,
-            'arn:aws:s3:::'+LAMBDA_CODE_BUCKET+'/*'
-        ] # arn:aws:s3:::bucket_name/key_name
-    )
-)
 
 ### Debugging (print out the object's information to see what can I do.)
 '''
