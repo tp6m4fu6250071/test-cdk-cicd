@@ -9,16 +9,13 @@ import boto3
 
 class MyServiceStackB(core.Stack):
 
-    def __init__(self, scope: core.Construct, id: str, code_path, source_bundle_path, lambda_code_file, lambda_code_bucket_name, **kwargs) -> None:
+    def __init__(self, scope: core.Construct, id: str, source_bundle_path, lambda_code_file, lambda_code_bucket_name, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
-        self.code_path = code_path
         self.lambda_code_file = lambda_code_file
         self.lambda_code_bucket_name = lambda_code_bucket_name
         tmp_lambda_code_file = lambda_code_file.split('.')
         self.lambda_code_file_name = tmp_lambda_code_file[0]
-
-        #self.upload_code()
 
         lambda_code_bucket = s3.Bucket.from_bucket_attributes(
             self, 'LambdaCodeBucket',
@@ -36,13 +33,3 @@ class MyServiceStackB(core.Stack):
             handler = self.lambda_code_file_name+'.lambda_handler',
             timeout = core.Duration.seconds(10),
         )
-    '''
-    def upload_code(self):
-        with open(self.code_path+self.lambda_code_file, 'r') as f:
-            client = boto3.client('s3')
-            client.put_object(
-                Bucket = self.lambda_code_bucket_name,
-                Body = f.read(),
-                Key = self.lambda_code_file
-            )
-    '''

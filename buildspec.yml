@@ -9,10 +9,10 @@ phases:
   pre_build:
     commands:
       - echo $LAMBDA_CODE_BUCKET
-      - zip -j function.zip hello/lambda_code/$LAMBDA_FUNCTION_FILENAME_A
-      - zip -j function.zip hello/lambda_code/$LAMBDA_FUNCTION_FILENAME_B
-      - zipinfo function.zip
-      - aws s3 cp function.zip s3://$LAMBDA_CODE_BUCKET
+      - zip -j $SOURCE_BUNDLE_NAME $CODE_PATH/$LAMBDA_FUNCTION_FILENAME_A
+      - zip -j $SOURCE_BUNDLE_NAME $CODE_PATH/$LAMBDA_FUNCTION_FILENAME_B
+      - zipinfo $SOURCE_BUNDLE_NAME
+      - aws s3 cp $SOURCE_BUNDLE_NAME s3://$LAMBDA_CODE_BUCKET
   build:
     commands:
       - pip install -r requirements.txt
