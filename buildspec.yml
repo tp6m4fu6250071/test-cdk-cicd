@@ -6,6 +6,13 @@ phases:
       - cdk --version
       - ls -al
       - pip install --upgrade pip
+  pre_build:
+    commands:
+      - echo $LAMBDA_CODE_BUCKET
+      - zip -j function.zip hello/lambda_code/$LAMBDA_FUNCTION_FILENAME_A
+      - zip -j function.zip hello/lambda_code/$LAMBDA_FUNCTION_FILENAME_B
+      - zipinfo function.zip
+      - aws s3 cp function.zip $LAMBDA_CODE_BUCKET
   build:
     commands:
       - pip install -r requirements.txt

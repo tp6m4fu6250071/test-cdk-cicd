@@ -12,9 +12,12 @@ import aws_cdk.app_delivery as cicd
 import aws_cdk.aws_iam as iam
 
 CODE_PATH = './hello/lambda_code/'
+SOURCE_BUNDLE_NAME = 'cdk_pipeline_function.zip'
 LAMBDA_CODE_BUCKET = 'testhomework'
 GITHUB_OWNER = 'tp6m4fu6250071'
 GITHUB_REPO = 'test-cdk-cicd'
+LAMBDA_FUNCTION_FILENAME_A = 'lambda_function_a.py'
+LAMBDA_FUNCTION_FILENAME_B = 'lambda_function_b.py'
 
 app = core.App()
 pipeline_stack = core.Stack(app, "CdkPipelineStack")
@@ -37,7 +40,15 @@ pipeline.add_stage(
     actions=[source]
 )
 
-project = codebuild.PipelineProject(pipeline_stack, "CodeBuild")
+project = codebuild.PipelineProject(pipeline_stack, "CodeBuild",
+    environment_variables = {
+        "LAMBDA_CODE_BUCKET": codebuild.BuildEnvironmentVariable(LAMBDA_CODE_BUCKET),
+        "CODE_PATH": codebuild.BuildEnvironmentVariable(CODE_PATH),
+        "LAMBDA_FUNCTION_FILENAME_A": codebuild.BuildEnvironmentVariable(LAMBDA_FUNCTION_FILENAME_A),
+        "LAMBDA_FUNCTION_FILENAME_B": codebuild.BuildEnvironmentVariable(LAMBDA_FUNCTION_FILENAME_B)
+
+    }
+)
 ### for no Assets workaround, I need to add the permission for CodeBuild service role to access my bucket. Otherwise, CodeBuild could not put my lambda code while running "cdk synth" command in the build project.
 myS3AccessPolicy = iam.Policy(pipeline_stack, "MyS3AccessPolicy",
     roles = [
@@ -78,7 +89,7 @@ self_update_stage.add_action(cicd.PipelineDeployStackAction(
 
 deploy_stage = pipeline.add_stage(stage_name="Deploy")
 #service_stack_a = MyServiceStackA(app, "ServiceStackA")
-service_stack_a = MyServiceStackA(app, "ServiceStackA", CODE_PATH, 'lambda_function_a.py', LAMBDA_CODE_BUCKET)
+service_stack_a = MyServiceStackA(app, "ServiceStackA", CODE_PATH, SOURCE_BUNDLE_NAME, LAMBDA_FUNCTION_FILENAME_A, LAMBDA_CODE_BUCKET)
 deploy_service_aAction = cicd.PipelineDeployStackAction(
     stack=service_stack_a,
     input=synthesized_app,
@@ -90,7 +101,7 @@ deploy_service_aAction = cicd.PipelineDeployStackAction(
 deploy_stage.add_action(deploy_service_aAction)
 
 #service_stack_b = MyServiceStackB(app, "ServiceStackB")
-service_stack_b = MyServiceStackB(app, "ServiceStackB", CODE_PATH, 'lambda_function_b.py', LAMBDA_CODE_BUCKET)
+service_stack_b = MyServiceStackB(app, "ServiceStackB", CODE_PATH, SOURCE_BUNDLE_NAME, LAMBDA_FUNCTION_FILENAME_B, LAMBDA_CODE_BUCKET)
 deploy_service_bAction = cicd.PipelineDeployStackAction(
     stack=service_stack_b,
     input=synthesized_app,
