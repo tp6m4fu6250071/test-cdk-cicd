@@ -18,5 +18,5 @@ phases:
       - pip install -r requirements.txt
       - cdk synth -o dist
 artifacts:
-  base-directory: dist
+  base-directory: dist1
   files: '**/*'

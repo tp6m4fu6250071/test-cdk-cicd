@@ -88,6 +88,24 @@ self_update_stage.add_action(cicd.PipelineDeployStackAction(
     admin_permissions=True
 ))
 
+### Since the original CFN service role for CdkPipelineStack doesn't have permission to delete roles, add it as a workaround. If I didn't add it into this solution, the stack deletion would be failed because the role doesn't have the permission to delete roles. However, if I add the permission via console, the stack deletion would be failed as well, because this role was also created within this stack. So the out-of-band added policy is not allowed when deleting the stack.
+addDeleteRolePolicy = iam.Policy(pipeline_stack, "DeleteRolePolicy",
+    roles = [
+        pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role')
+    ]
+).add_statements(
+    iam.PolicyStatement(
+        actions = [
+            'iam:DeleteRole'
+        ],
+        effect = iam.Effect.ALLOW,
+        resources = [
+            '*'
+        ]
+    )
+)
+### End of this no iam:DeleteRole permission workaround
+
 deploy_stage = pipeline.add_stage(stage_name="Deploy")
 #service_stack_a = MyServiceStackA(app, "ServiceStackA")
 service_stack_a = MyServiceStackA(app, "ServiceStackA", SOURCE_BUNDLE_NAME, LAMBDA_FUNCTION_FILENAME_A, LAMBDA_CODE_BUCKET)
@@ -124,6 +142,8 @@ for obj in pipeline.node.find_all():
         pass
     print('-------------------')
 '''
+# CdkPipelineStack.CodePipeline.SelfUpdate.ChangeSet.Role.Resource.LogicalID.117
+#print(pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role'))
 # CdkPipelineStack.CodePipeline.build.CodeBuild.CodePipelineActionRole.Resource.LogicalID.78
 # print(pipeline.node.try_find_child('build').node.try_find_child('CodeBuild').node.try_find_child('CodePipelineActionRole'))
 # CdkPipelineStack.CodePipeline.source.GitHub.WebhookResource.LogicalID.51
