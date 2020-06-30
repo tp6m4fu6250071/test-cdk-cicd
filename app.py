@@ -88,6 +88,7 @@ self_update_stage.add_action(cicd.PipelineDeployStackAction(
     admin_permissions=True
 ))
 
+'''
 ### Since the original CFN service role for CdkPipelineStack doesn't have permission to delete roles, add it as a workaround. If I didn't add it into this solution, the stack deletion would be failed because the role doesn't have the permission to delete roles. However, if I add the permission via console, the stack deletion would be failed as well, because this role was also created within this stack. So the out-of-band added policy is not allowed when deleting the stack.
 addDeleteRolePolicy = iam.Policy(pipeline_stack, "DeleteRolePolicy",
     roles = [
@@ -105,6 +106,7 @@ addDeleteRolePolicy = iam.Policy(pipeline_stack, "DeleteRolePolicy",
     )
 )
 ### End of this no iam:DeleteRole permission workaround
+'''
 
 deploy_stage = pipeline.add_stage(stage_name="Deploy")
 #service_stack_a = MyServiceStackA(app, "ServiceStackA")
