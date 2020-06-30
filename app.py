@@ -114,15 +114,8 @@ deploy_service_bAction = cicd.PipelineDeployStackAction(
 deploy_stage.add_action(deploy_service_bAction)
 
 ### Since the original CFN service role for CdkPipelineStack will "be attached" to a default policy, it will delete the policy before deleting the role. Hence, there will show that the stack's role doesn't have permission to delete some resources. From my investigation, there's no way to change the default policy which is an inline policy to workaround the issue. Due to the original default policy is also using the admin permission, I add a new ManagedPolicy with admin permission and attach this policy into a role as a workaround.
-'''
-cdkpipelinestack_default_policy = pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role').node.try_find_child('DefaultPolicy')
-cfn_cdkpipelinestack_default_policy = cdkpipelinestack_default_policy.node.default_child
-print(cfn_cdkpipelinestack_default_policy.add_property_override)
-cfn_cdkpipelinestack_default_policy.add_property_override(
-    property_path = 'Roles',
-    value = core.Aws.NO_VALUE 
-) # remove the original refernece. So the previous inline policy won't attach the role on it. 
-'''
+
+# Since we could not create a policy without Role/User/Group, I remove the policy node directly.
 pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role').node.try_remove_child('DefaultPolicy')
 
 # add a new ManagedPolicy with 'arn:aws:iam::aws:policy/AdministratorAccess'
