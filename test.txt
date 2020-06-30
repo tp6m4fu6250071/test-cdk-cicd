@@ -1,244 +1,1218 @@
-<aws_cdk.aws_codepipeline.Pipeline object at 0x111d93f90>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_stage', 'add_to_role_policy', 'artifact_bucket', 'cross_region_support', 'from_pipeline_arn', 'is_construct', 'node', 'on_event', 'on_state_change', 'pipeline_arn', 'pipeline_name', 'pipeline_version', 'role', 'stack', 'stage_count', 'stages', 'to_string']
--------------------
-<aws_cdk.aws_kms.Key object at 0x112506310>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_policy', '_prepare', '_synthesize', '_trust_account_identities', '_validate', 'add_alias', 'add_to_resource_policy', 'from_key_arn', 'grant', 'grant_decrypt', 'grant_encrypt', 'grant_encrypt_decrypt', 'is_construct', 'key_arn', 'key_id', 'node', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_kms.CfnKey object at 0x112506250>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'attr_arn', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'description', 'enable_key_rotation', 'enabled', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'key_policy', 'key_usage', 'logical_id', 'node', 'override_logical_id', 'pending_window_in_days', 'ref', 'stack', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.ArtifactsBucketEncryptionKey.Resource.LogicalID.13]}
--------------------
-<aws_cdk.aws_s3.Bucket object at 0x112506090>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_auto_create_policy', '_disallow_public_access', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_cors_rule', 'add_event_notification', 'add_lifecycle_rule', 'add_metric', 'add_object_created_notification', 'add_object_removed_notification', 'add_to_resource_policy', 'arn_for_objects', 'bucket_arn', 'bucket_domain_name', 'bucket_dual_stack_domain_name', 'bucket_name', 'bucket_regional_domain_name', 'bucket_website_domain_name', 'bucket_website_url', 'encryption_key', 'from_bucket_arn', 'from_bucket_attributes', 'from_bucket_name', 'grant_delete', 'grant_public_access', 'grant_put', 'grant_read', 'grant_read_write', 'grant_write', 'is_construct', 'node', 'on_cloud_trail_event', 'on_cloud_trail_put_object', 'on_cloud_trail_write_object', 'policy', 's3_url_for_object', 'stack', 'to_string', 'url_for_object']
--------------------
-<aws_cdk.aws_s3.CfnBucket object at 0x1125063d0>
-['AbortIncompleteMultipartUploadProperty', 'AccelerateConfigurationProperty', 'AccessControlTranslationProperty', 'AnalyticsConfigurationProperty', 'BucketEncryptionProperty', 'CFN_RESOURCE_TYPE_NAME', 'CorsConfigurationProperty', 'CorsRuleProperty', 'DataExportProperty', 'DefaultRetentionProperty', 'DeleteMarkerReplicationProperty', 'DestinationProperty', 'EncryptionConfigurationProperty', 'FilterRuleProperty', 'InventoryConfigurationProperty', 'LambdaConfigurationProperty', 'LifecycleConfigurationProperty', 'LoggingConfigurationProperty', 'MetricsConfigurationProperty', 'MetricsProperty', 'NoncurrentVersionTransitionProperty', 'NotificationConfigurationProperty', 'NotificationFilterProperty', 'ObjectLockConfigurationProperty', 'ObjectLockRuleProperty', 'PublicAccessBlockConfigurationProperty', 'QueueConfigurationProperty', 'RedirectAllRequestsToProperty', 'RedirectRuleProperty', 'ReplicationConfigurationProperty', 'ReplicationDestinationProperty', 'ReplicationRuleAndOperatorProperty', 'ReplicationRuleFilterProperty', 'ReplicationRuleProperty', 'ReplicationTimeProperty', 'ReplicationTimeValueProperty', 'RoutingRuleConditionProperty', 'RoutingRuleProperty', 'RuleProperty', 'S3KeyFilterProperty', 'ServerSideEncryptionByDefaultProperty', 'ServerSideEncryptionRuleProperty', 'SourceSelectionCriteriaProperty', 'SseKmsEncryptedObjectsProperty', 'StorageClassAnalysisProperty', 'TagFilterProperty', 'TopicConfigurationProperty', 'TransitionProperty', 'VersioningConfigurationProperty', 'WebsiteConfigurationProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'accelerate_configuration', 'access_control', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'analytics_configurations', 'apply_removal_policy', 'attr_arn', 'attr_domain_name', 'attr_dual_stack_domain_name', 'attr_regional_domain_name', 'attr_website_url', 'bucket_encryption', 'bucket_name', 'cfn_options', 'cfn_resource_type', 'cors_configuration', 'creation_stack', 'from_cloud_formation', 'get_att', 'inspect', 'inventory_configurations', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'lifecycle_configuration', 'logging_configuration', 'logical_id', 'metrics_configurations', 'node', 'notification_configuration', 'object_lock_configuration', 'object_lock_enabled', 'override_logical_id', 'public_access_block_configuration', 'ref', 'replication_configuration', 'stack', 'tags', 'to_string', 'versioning_configuration', 'website_configuration']
-${Token[CdkPipelineStack.CodePipeline.ArtifactsBucket.Resource.LogicalID.18]}
--------------------
-<aws_cdk.core.Construct object at 0x112506190>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_kms.Alias object at 0x112506110>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_alias', 'add_to_resource_policy', 'alias_name', 'alias_target_key', 'from_alias_attributes', 'from_alias_name', 'grant', 'grant_decrypt', 'grant_encrypt', 'grant_encrypt_decrypt', 'is_construct', 'key_arn', 'key_id', 'node', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_kms.CfnAlias object at 0x1124d2390>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'alias_name', 'apply_removal_policy', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'node', 'override_logical_id', 'ref', 'stack', 'target_key_id', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.ArtifactsBucketEncryptionKeyAlias.Resource.LogicalID.29]}
--------------------
-<aws_cdk.aws_iam.Role object at 0x1124d2590>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_managed_policy', 'add_to_policy', 'add_to_principal_policy', 'assume_role_action', 'assume_role_policy', 'attach_inline_policy', 'from_role_arn', 'grant', 'grant_pass_role', 'grant_principal', 'is_construct', 'node', 'permissions_boundary', 'policy_fragment', 'role_arn', 'role_id', 'role_name', 'stack', 'to_string', 'without_policy_updates']
--------------------
-<aws_cdk.aws_iam.CfnRole object at 0x112506210>
-['CFN_RESOURCE_TYPE_NAME', 'PolicyProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'assume_role_policy_document', 'attr_arn', 'attr_role_id', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'description', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'managed_policy_arns', 'max_session_duration', 'node', 'override_logical_id', 'path', 'permissions_boundary', 'policies', 'ref', 'role_name', 'stack', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.Role.Resource.LogicalID.34]}
--------------------
-<aws_cdk.aws_iam.Policy object at 0x1124d2450>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_statements', 'attach_to_group', 'attach_to_role', 'attach_to_user', 'document', 'from_policy_name', 'is_construct', 'node', 'policy_name', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_iam.CfnPolicy object at 0x114083950>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'from_cloud_formation', 'get_att', 'groups', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'node', 'override_logical_id', 'policy_document', 'policy_name', 'ref', 'roles', 'stack', 'to_string', 'users']
-${Token[CdkPipelineStack.CodePipeline.Role.DefaultPolicy.Resource.LogicalID.46]}
--------------------
-<aws_cdk.aws_codepipeline.CfnPipeline object at 0x114083c50>
-['ActionDeclarationProperty', 'ActionTypeIdProperty', 'ArtifactStoreMapProperty', 'ArtifactStoreProperty', 'BlockerDeclarationProperty', 'CFN_RESOURCE_TYPE_NAME', 'EncryptionKeyProperty', 'InputArtifactProperty', 'OutputArtifactProperty', 'StageDeclarationProperty', 'StageTransitionProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'artifact_store', 'artifact_stores', 'attr_version', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'disable_inbound_stage_transitions', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'name', 'node', 'override_logical_id', 'ref', 'restart_execution_on_update', 'role_arn', 'stack', 'stages', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.Resource.LogicalID.40]}
--------------------
-<aws_cdk.core.Construct object at 0x114083d90>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.core.Construct object at 0x114083f90>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_codepipeline.CfnWebhook object at 0x114083e90>
-['CFN_RESOURCE_TYPE_NAME', 'WebhookAuthConfigurationProperty', 'WebhookFilterRuleProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'attr_url', 'authentication', 'authentication_configuration', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'filters', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'name', 'node', 'override_logical_id', 'ref', 'register_with_third_party', 'stack', 'target_action', 'target_pipeline', 'target_pipeline_version', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.source.GitHub.WebhookResource.LogicalID.51]}
--------------------
-<aws_cdk.core.Construct object at 0x114083fd0>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.core.Construct object at 0x114083850>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Role object at 0x114083790>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_managed_policy', 'add_to_policy', 'add_to_principal_policy', 'assume_role_action', 'assume_role_policy', 'attach_inline_policy', 'from_role_arn', 'grant', 'grant_pass_role', 'grant_principal', 'is_construct', 'node', 'permissions_boundary', 'policy_fragment', 'role_arn', 'role_id', 'role_name', 'stack', 'to_string', 'without_policy_updates']
--------------------
-<aws_cdk.aws_iam.CfnRole object at 0x114083dd0>
-['CFN_RESOURCE_TYPE_NAME', 'PolicyProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'assume_role_policy_document', 'attr_arn', 'attr_role_id', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'description', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'managed_policy_arns', 'max_session_duration', 'node', 'override_logical_id', 'path', 'permissions_boundary', 'policies', 'ref', 'role_name', 'stack', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.build.CodeBuild.CodePipelineActionRole.Resource.LogicalID.78]}
--------------------
-<aws_cdk.aws_iam.Policy object at 0x114083f50>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_statements', 'attach_to_group', 'attach_to_role', 'attach_to_user', 'document', 'from_policy_name', 'is_construct', 'node', 'policy_name', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_iam.CfnPolicy object at 0x114083710>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'from_cloud_formation', 'get_att', 'groups', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'node', 'override_logical_id', 'policy_document', 'policy_name', 'ref', 'roles', 'stack', 'to_string', 'users']
-${Token[CdkPipelineStack.CodePipeline.build.CodeBuild.CodePipelineActionRole.DefaultPolicy.Resource.LogicalID.88]}
--------------------
-<aws_cdk.core.Construct object at 0x114083ed0>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.core.Construct object at 0x114083cd0>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Role object at 0x114083910>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_managed_policy', 'add_to_policy', 'add_to_principal_policy', 'assume_role_action', 'assume_role_policy', 'attach_inline_policy', 'from_role_arn', 'grant', 'grant_pass_role', 'grant_principal', 'is_construct', 'node', 'permissions_boundary', 'policy_fragment', 'role_arn', 'role_id', 'role_name', 'stack', 'to_string', 'without_policy_updates']
--------------------
-<aws_cdk.aws_iam.CfnRole object at 0x114083a90>
-['CFN_RESOURCE_TYPE_NAME', 'PolicyProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'assume_role_policy_document', 'attr_arn', 'attr_role_id', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'description', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'managed_policy_arns', 'max_session_duration', 'node', 'override_logical_id', 'path', 'permissions_boundary', 'policies', 'ref', 'role_name', 'stack', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.SelfUpdate.Execute.CodePipelineActionRole.Resource.LogicalID.94]}
--------------------
-<aws_cdk.core.Construct object at 0x114083a10>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Policy object at 0x114083b50>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_statements', 'attach_to_group', 'attach_to_role', 'attach_to_user', 'document', 'from_policy_name', 'is_construct', 'node', 'policy_name', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_iam.CfnPolicy object at 0x114083a50>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'from_cloud_formation', 'get_att', 'groups', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'node', 'override_logical_id', 'policy_document', 'policy_name', 'ref', 'roles', 'stack', 'to_string', 'users']
-${Token[CdkPipelineStack.CodePipeline.SelfUpdate.Execute.CodePipelineActionRole.DefaultPolicy.Resource.LogicalID.134]}
--------------------
-<aws_cdk.core.Construct object at 0x114083ad0>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Role object at 0x114083990>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_managed_policy', 'add_to_policy', 'add_to_principal_policy', 'assume_role_action', 'assume_role_policy', 'attach_inline_policy', 'from_role_arn', 'grant', 'grant_pass_role', 'grant_principal', 'is_construct', 'node', 'permissions_boundary', 'policy_fragment', 'role_arn', 'role_id', 'role_name', 'stack', 'to_string', 'without_policy_updates']
--------------------
-<aws_cdk.aws_iam.CfnRole object at 0x114083b10>
-['CFN_RESOURCE_TYPE_NAME', 'PolicyProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'assume_role_policy_document', 'attr_arn', 'attr_role_id', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'description', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'managed_policy_arns', 'max_session_duration', 'node', 'override_logical_id', 'path', 'permissions_boundary', 'policies', 'ref', 'role_name', 'stack', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.SelfUpdate.ChangeSet.CodePipelineActionRole.Resource.LogicalID.103]}
--------------------
-<aws_cdk.core.Construct object at 0x114083b90>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Policy object at 0x114083d50>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_statements', 'attach_to_group', 'attach_to_role', 'attach_to_user', 'document', 'from_policy_name', 'is_construct', 'node', 'policy_name', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_iam.CfnPolicy object at 0x1140839d0>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'from_cloud_formation', 'get_att', 'groups', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'node', 'override_logical_id', 'policy_document', 'policy_name', 'ref', 'roles', 'stack', 'to_string', 'users']
-${Token[CdkPipelineStack.CodePipeline.SelfUpdate.ChangeSet.CodePipelineActionRole.DefaultPolicy.Resource.LogicalID.127]}
--------------------
-<aws_cdk.aws_iam.Role object at 0x114083e50>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_managed_policy', 'add_to_policy', 'add_to_principal_policy', 'assume_role_action', 'assume_role_policy', 'attach_inline_policy', 'from_role_arn', 'grant', 'grant_pass_role', 'grant_principal', 'is_construct', 'node', 'permissions_boundary', 'policy_fragment', 'role_arn', 'role_id', 'role_name', 'stack', 'to_string', 'without_policy_updates']
--------------------
-<aws_cdk.aws_iam.CfnRole object at 0x11250de90>
-['CFN_RESOURCE_TYPE_NAME', 'PolicyProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'assume_role_policy_document', 'attr_arn', 'attr_role_id', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'description', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'managed_policy_arns', 'max_session_duration', 'node', 'override_logical_id', 'path', 'permissions_boundary', 'policies', 'ref', 'role_name', 'stack', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.SelfUpdate.ChangeSet.Role.Resource.LogicalID.112]}
--------------------
-<aws_cdk.aws_iam.Policy object at 0x11250dfd0>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_statements', 'attach_to_group', 'attach_to_role', 'attach_to_user', 'document', 'from_policy_name', 'is_construct', 'node', 'policy_name', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_iam.CfnPolicy object at 0x11250df50>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'from_cloud_formation', 'get_att', 'groups', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'node', 'override_logical_id', 'policy_document', 'policy_name', 'ref', 'roles', 'stack', 'to_string', 'users']
-${Token[CdkPipelineStack.CodePipeline.SelfUpdate.ChangeSet.Role.DefaultPolicy.Resource.LogicalID.122]}
--------------------
-<aws_cdk.core.Construct object at 0x11250df90>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.core.Construct object at 0x11250ded0>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Role object at 0x11250ddd0>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_managed_policy', 'add_to_policy', 'add_to_principal_policy', 'assume_role_action', 'assume_role_policy', 'attach_inline_policy', 'from_role_arn', 'grant', 'grant_pass_role', 'grant_principal', 'is_construct', 'node', 'permissions_boundary', 'policy_fragment', 'role_arn', 'role_id', 'role_name', 'stack', 'to_string', 'without_policy_updates']
--------------------
-<aws_cdk.aws_iam.CfnRole object at 0x11250de50>
-['CFN_RESOURCE_TYPE_NAME', 'PolicyProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'assume_role_policy_document', 'attr_arn', 'attr_role_id', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'description', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'managed_policy_arns', 'max_session_duration', 'node', 'override_logical_id', 'path', 'permissions_boundary', 'policies', 'ref', 'role_name', 'stack', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.Deploy.ExecuteA.CodePipelineActionRole.Resource.LogicalID.158]}
--------------------
-<aws_cdk.core.Construct object at 0x11250d290>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Policy object at 0x11250df10>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_statements', 'attach_to_group', 'attach_to_role', 'attach_to_user', 'document', 'from_policy_name', 'is_construct', 'node', 'policy_name', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_iam.CfnPolicy object at 0x11250dd90>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'from_cloud_formation', 'get_att', 'groups', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'node', 'override_logical_id', 'policy_document', 'policy_name', 'ref', 'roles', 'stack', 'to_string', 'users']
-${Token[CdkPipelineStack.CodePipeline.Deploy.ExecuteA.CodePipelineActionRole.DefaultPolicy.Resource.LogicalID.198]}
--------------------
-<aws_cdk.core.Construct object at 0x11250de10>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Role object at 0x11250d390>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_managed_policy', 'add_to_policy', 'add_to_principal_policy', 'assume_role_action', 'assume_role_policy', 'attach_inline_policy', 'from_role_arn', 'grant', 'grant_pass_role', 'grant_principal', 'is_construct', 'node', 'permissions_boundary', 'policy_fragment', 'role_arn', 'role_id', 'role_name', 'stack', 'to_string', 'without_policy_updates']
--------------------
-<aws_cdk.aws_iam.CfnRole object at 0x11250dd50>
-['CFN_RESOURCE_TYPE_NAME', 'PolicyProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'assume_role_policy_document', 'attr_arn', 'attr_role_id', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'description', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'managed_policy_arns', 'max_session_duration', 'node', 'override_logical_id', 'path', 'permissions_boundary', 'policies', 'ref', 'role_name', 'stack', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.Deploy.ChangeSetA.CodePipelineActionRole.Resource.LogicalID.167]}
--------------------
-<aws_cdk.core.Construct object at 0x11250d890>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Policy object at 0x11250db90>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_statements', 'attach_to_group', 'attach_to_role', 'attach_to_user', 'document', 'from_policy_name', 'is_construct', 'node', 'policy_name', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_iam.CfnPolicy object at 0x11250dcd0>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'from_cloud_formation', 'get_att', 'groups', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'node', 'override_logical_id', 'policy_document', 'policy_name', 'ref', 'roles', 'stack', 'to_string', 'users']
-${Token[CdkPipelineStack.CodePipeline.Deploy.ChangeSetA.CodePipelineActionRole.DefaultPolicy.Resource.LogicalID.191]}
--------------------
-<aws_cdk.aws_iam.Role object at 0x11250dd10>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_managed_policy', 'add_to_policy', 'add_to_principal_policy', 'assume_role_action', 'assume_role_policy', 'attach_inline_policy', 'from_role_arn', 'grant', 'grant_pass_role', 'grant_principal', 'is_construct', 'node', 'permissions_boundary', 'policy_fragment', 'role_arn', 'role_id', 'role_name', 'stack', 'to_string', 'without_policy_updates']
--------------------
-<aws_cdk.aws_iam.CfnRole object at 0x11250dc50>
-['CFN_RESOURCE_TYPE_NAME', 'PolicyProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'assume_role_policy_document', 'attr_arn', 'attr_role_id', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'description', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'managed_policy_arns', 'max_session_duration', 'node', 'override_logical_id', 'path', 'permissions_boundary', 'policies', 'ref', 'role_name', 'stack', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.Deploy.ChangeSetA.Role.Resource.LogicalID.176]}
--------------------
-<aws_cdk.aws_iam.Policy object at 0x11250dc90>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_statements', 'attach_to_group', 'attach_to_role', 'attach_to_user', 'document', 'from_policy_name', 'is_construct', 'node', 'policy_name', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_iam.CfnPolicy object at 0x11250db10>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'from_cloud_formation', 'get_att', 'groups', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'node', 'override_logical_id', 'policy_document', 'policy_name', 'ref', 'roles', 'stack', 'to_string', 'users']
-${Token[CdkPipelineStack.CodePipeline.Deploy.ChangeSetA.Role.DefaultPolicy.Resource.LogicalID.186]}
--------------------
-<aws_cdk.core.Construct object at 0x11250dc10>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Role object at 0x11250d9d0>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_managed_policy', 'add_to_policy', 'add_to_principal_policy', 'assume_role_action', 'assume_role_policy', 'attach_inline_policy', 'from_role_arn', 'grant', 'grant_pass_role', 'grant_principal', 'is_construct', 'node', 'permissions_boundary', 'policy_fragment', 'role_arn', 'role_id', 'role_name', 'stack', 'to_string', 'without_policy_updates']
--------------------
-<aws_cdk.aws_iam.CfnRole object at 0x11250da50>
-['CFN_RESOURCE_TYPE_NAME', 'PolicyProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'assume_role_policy_document', 'attr_arn', 'attr_role_id', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'description', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'managed_policy_arns', 'max_session_duration', 'node', 'override_logical_id', 'path', 'permissions_boundary', 'policies', 'ref', 'role_name', 'stack', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.Deploy.ExecuteB.CodePipelineActionRole.Resource.LogicalID.222]}
--------------------
-<aws_cdk.core.Construct object at 0x11250dbd0>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Policy object at 0x11250d990>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_statements', 'attach_to_group', 'attach_to_role', 'attach_to_user', 'document', 'from_policy_name', 'is_construct', 'node', 'policy_name', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_iam.CfnPolicy object at 0x11250db50>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'from_cloud_formation', 'get_att', 'groups', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'node', 'override_logical_id', 'policy_document', 'policy_name', 'ref', 'roles', 'stack', 'to_string', 'users']
-${Token[CdkPipelineStack.CodePipeline.Deploy.ExecuteB.CodePipelineActionRole.DefaultPolicy.Resource.LogicalID.262]}
--------------------
-<aws_cdk.core.Construct object at 0x11250da10>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Role object at 0x11250da90>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_managed_policy', 'add_to_policy', 'add_to_principal_policy', 'assume_role_action', 'assume_role_policy', 'attach_inline_policy', 'from_role_arn', 'grant', 'grant_pass_role', 'grant_principal', 'is_construct', 'node', 'permissions_boundary', 'policy_fragment', 'role_arn', 'role_id', 'role_name', 'stack', 'to_string', 'without_policy_updates']
--------------------
-<aws_cdk.aws_iam.CfnRole object at 0x11250dad0>
-['CFN_RESOURCE_TYPE_NAME', 'PolicyProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'assume_role_policy_document', 'attr_arn', 'attr_role_id', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'description', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'managed_policy_arns', 'max_session_duration', 'node', 'override_logical_id', 'path', 'permissions_boundary', 'policies', 'ref', 'role_name', 'stack', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.Deploy.ChangeSetB.CodePipelineActionRole.Resource.LogicalID.231]}
--------------------
-<aws_cdk.core.Construct object at 0x11250d8d0>
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_synthesize', '_validate', 'is_construct', 'node', 'to_string']
--------------------
-<aws_cdk.aws_iam.Policy object at 0x11250d950>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_statements', 'attach_to_group', 'attach_to_role', 'attach_to_user', 'document', 'from_policy_name', 'is_construct', 'node', 'policy_name', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_iam.CfnPolicy object at 0x11250d850>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'from_cloud_formation', 'get_att', 'groups', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'node', 'override_logical_id', 'policy_document', 'policy_name', 'ref', 'roles', 'stack', 'to_string', 'users']
-${Token[CdkPipelineStack.CodePipeline.Deploy.ChangeSetB.CodePipelineActionRole.DefaultPolicy.Resource.LogicalID.255]}
--------------------
-<aws_cdk.aws_iam.Role object at 0x1125184d0>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_managed_policy', 'add_to_policy', 'add_to_principal_policy', 'assume_role_action', 'assume_role_policy', 'attach_inline_policy', 'from_role_arn', 'grant', 'grant_pass_role', 'grant_principal', 'is_construct', 'node', 'permissions_boundary', 'policy_fragment', 'role_arn', 'role_id', 'role_name', 'stack', 'to_string', 'without_policy_updates']
--------------------
-<aws_cdk.aws_iam.CfnRole object at 0x1125180d0>
-['CFN_RESOURCE_TYPE_NAME', 'PolicyProperty', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'assume_role_policy_document', 'attr_arn', 'attr_role_id', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'description', 'from_cloud_formation', 'get_att', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'managed_policy_arns', 'max_session_duration', 'node', 'override_logical_id', 'path', 'permissions_boundary', 'policies', 'ref', 'role_name', 'stack', 'tags', 'to_string']
-${Token[CdkPipelineStack.CodePipeline.Deploy.ChangeSetB.Role.Resource.LogicalID.240]}
--------------------
-<aws_cdk.aws_iam.Policy object at 0x112518790>
-['__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_generate_physical_name', '_get_resource_arn_attribute', '_get_resource_name_attribute', '_on_prepare', '_on_synthesize', '_on_validate', '_physical_name', '_prepare', '_synthesize', '_validate', 'add_statements', 'attach_to_group', 'attach_to_role', 'attach_to_user', 'document', 'from_policy_name', 'is_construct', 'node', 'policy_name', 'stack', 'to_string']
--------------------
-<aws_cdk.aws_iam.CfnPolicy object at 0x1125186d0>
-['CFN_RESOURCE_TYPE_NAME', '__abstractmethods__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jsii_ifaces__', '__jsii_proxy_class__', '__jsii_ref__', '__jsii_type__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_cfn_properties', '_on_prepare', '_on_synthesize', '_on_validate', '_prepare', '_render_properties', '_synthesize', '_updated_properites', '_validate', '_validate_properties', 'add_deletion_override', 'add_depends_on', 'add_override', 'add_property_deletion_override', 'add_property_override', 'apply_removal_policy', 'cfn_options', 'cfn_resource_type', 'creation_stack', 'from_cloud_formation', 'get_att', 'groups', 'inspect', 'is_cfn_element', 'is_cfn_resource', 'is_construct', 'logical_id', 'node', 'override_logical_id', 'policy_document', 'policy_name', 'ref', 'roles', 'stack', 'to_string', 'users']
-${Token[CdkPipelineStack.CodePipeline.Deploy.ChangeSetB.Role.DefaultPolicy.Resource.LogicalID.250]}
--------------------
+Resources:
+  CodePipelineArtifactsBucketEncryptionKey85407CB4:
+    Type: AWS::KMS::Key
+    Properties:
+      KeyPolicy:
+        Statement:
+          - Action:
+              - kms:Create*
+              - kms:Describe*
+              - kms:Enable*
+              - kms:List*
+              - kms:Put*
+              - kms:Update*
+              - kms:Revoke*
+              - kms:Disable*
+              - kms:Get*
+              - kms:Delete*
+              - kms:ScheduleKeyDeletion
+              - kms:CancelKeyDeletion
+              - kms:GenerateDataKey
+              - kms:TagResource
+              - kms:UntagResource
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - ":iam::"
+                    - Ref: AWS::AccountId
+                    - :root
+            Resource: "*"
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+              - kms:Encrypt
+              - kms:ReEncrypt*
+              - kms:GenerateDataKey*
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::GetAtt:
+                  - CodePipelineRoleB3A660B4
+                  - Arn
+            Resource: "*"
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+              - kms:Encrypt
+              - kms:ReEncrypt*
+              - kms:GenerateDataKey*
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::GetAtt:
+                  - CodeBuildRoleE9A44575
+                  - Arn
+            Resource: "*"
+          - Action:
+              - kms:Decrypt
+              - kms:Encrypt
+              - kms:ReEncrypt*
+              - kms:GenerateDataKey*
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::GetAtt:
+                  - CodeBuildRoleE9A44575
+                  - Arn
+            Resource: "*"
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::GetAtt:
+                  - CodePipelineSelfUpdateChangeSetRole3D91BC92
+                  - Arn
+            Resource: "*"
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::GetAtt:
+                  - CodePipelineSelfUpdateChangeSetCodePipelineActionRole293482FD
+                  - Arn
+            Resource: "*"
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::GetAtt:
+                  - CodePipelineDeployChangeSetARoleBB3ED676
+                  - Arn
+            Resource: "*"
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::GetAtt:
+                  - CodePipelineDeployChangeSetACodePipelineActionRole6B307874
+                  - Arn
+            Resource: "*"
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::GetAtt:
+                  - CodePipelineDeployChangeSetBRoleE9C8578C
+                  - Arn
+            Resource: "*"
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::GetAtt:
+                  - CodePipelineDeployChangeSetBCodePipelineActionRoleAAB10335
+                  - Arn
+            Resource: "*"
+        Version: "2012-10-17"
+    UpdateReplacePolicy: Delete
+    DeletionPolicy: Delete
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/ArtifactsBucketEncryptionKey/Resource
+  CodePipelineArtifactsBucketF1E925CF:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              KMSMasterKeyID:
+                Fn::GetAtt:
+                  - CodePipelineArtifactsBucketEncryptionKey85407CB4
+                  - Arn
+              SSEAlgorithm: aws:kms
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+    UpdateReplacePolicy: Retain
+    DeletionPolicy: Retain
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/ArtifactsBucket/Resource
+  CodePipelineArtifactsBucketEncryptionKeyAliasA0605EC5:
+    Type: AWS::KMS::Alias
+    Properties:
+      AliasName: alias/codepipeline-cdkpipelinestackcodepipeline6d89650e
+      TargetKeyId:
+        Fn::GetAtt:
+          - CodePipelineArtifactsBucketEncryptionKey85407CB4
+          - Arn
+    UpdateReplacePolicy: Delete
+    DeletionPolicy: Delete
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/ArtifactsBucketEncryptionKeyAlias/Resource
+  CodePipelineRoleB3A660B4:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: codepipeline.amazonaws.com
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Role/Resource
+  CodePipelineRoleDefaultPolicy8D520A8D:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+              - s3:DeleteObject*
+              - s3:PutObject*
+              - s3:Abort*
+            Effect: Allow
+            Resource:
+              - Fn::GetAtt:
+                  - CodePipelineArtifactsBucketF1E925CF
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - CodePipelineArtifactsBucketF1E925CF
+                        - Arn
+                    - /*
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+              - kms:Encrypt
+              - kms:ReEncrypt*
+              - kms:GenerateDataKey*
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineArtifactsBucketEncryptionKey85407CB4
+                - Arn
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelinebuildCodeBuildCodePipelineActionRole44373C60
+                - Arn
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineSelfUpdateExecuteCodePipelineActionRoleFA57A2DA
+                - Arn
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineSelfUpdateChangeSetCodePipelineActionRole293482FD
+                - Arn
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineDeployExecuteACodePipelineActionRole3805F104
+                - Arn
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineDeployChangeSetACodePipelineActionRole6B307874
+                - Arn
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineDeployExecuteBCodePipelineActionRole0D8FC087
+                - Arn
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineDeployChangeSetBCodePipelineActionRoleAAB10335
+                - Arn
+        Version: "2012-10-17"
+      PolicyName: CodePipelineRoleDefaultPolicy8D520A8D
+      Roles:
+        - Ref: CodePipelineRoleB3A660B4
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Role/DefaultPolicy/Resource
+  CodePipelineB74E5936:
+    Type: AWS::CodePipeline::Pipeline
+    Properties:
+      RoleArn:
+        Fn::GetAtt:
+          - CodePipelineRoleB3A660B4
+          - Arn
+      Stages:
+        - Actions:
+            - ActionTypeId:
+                Category: Source
+                Owner: ThirdParty
+                Provider: GitHub
+                Version: "1"
+              Configuration:
+                Owner: tp6m4fu6250071
+                Repo: test-cdk-cicd
+                Branch: master
+                OAuthToken: "{{resolve:secretsmanager:cdk-github-token:SecretString:cdk-github-token::}}"
+                PollForSourceChanges: false
+              Name: GitHub
+              OutputArtifacts:
+                - Name: Artifact_source_GitHub
+              RunOrder: 1
+          Name: source
+        - Actions:
+            - ActionTypeId:
+                Category: Build
+                Owner: AWS
+                Provider: CodeBuild
+                Version: "1"
+              Configuration:
+                ProjectName:
+                  Ref: CodeBuild2FDE9E35
+              InputArtifacts:
+                - Name: Artifact_source_GitHub
+              Name: CodeBuild
+              OutputArtifacts:
+                - Name: Artifact_build_CodeBuild
+              RoleArn:
+                Fn::GetAtt:
+                  - CodePipelinebuildCodeBuildCodePipelineActionRole44373C60
+                  - Arn
+              RunOrder: 1
+          Name: build
+        - Actions:
+            - ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: "1"
+              Configuration:
+                StackName: CdkPipelineStack
+                Capabilities: CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn:
+                  Fn::GetAtt:
+                    - CodePipelineSelfUpdateChangeSetRole3D91BC92
+                    - Arn
+                ActionMode: CHANGE_SET_REPLACE
+                ChangeSetName: CDK-CodePipeline-ChangeSet
+                TemplatePath: Artifact_build_CodeBuild::CdkPipelineStack.template.json
+              InputArtifacts:
+                - Name: Artifact_build_CodeBuild
+              Name: ChangeSet
+              RoleArn:
+                Fn::GetAtt:
+                  - CodePipelineSelfUpdateChangeSetCodePipelineActionRole293482FD
+                  - Arn
+              RunOrder: 1
+            - ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: "1"
+              Configuration:
+                StackName: CdkPipelineStack
+                ActionMode: CHANGE_SET_EXECUTE
+                ChangeSetName: CDK-CodePipeline-ChangeSet
+              Name: Execute
+              RoleArn:
+                Fn::GetAtt:
+                  - CodePipelineSelfUpdateExecuteCodePipelineActionRoleFA57A2DA
+                  - Arn
+              RunOrder: 2
+          Name: SelfUpdate
+        - Actions:
+            - ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: "1"
+              Configuration:
+                StackName: ServiceStackA
+                Capabilities: CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn:
+                  Fn::GetAtt:
+                    - CodePipelineDeployChangeSetARoleBB3ED676
+                    - Arn
+                ActionMode: CHANGE_SET_REPLACE
+                ChangeSetName: CDK-CodePipeline-ChangeSet
+                TemplatePath: Artifact_build_CodeBuild::ServiceStackA.template.json
+              InputArtifacts:
+                - Name: Artifact_build_CodeBuild
+              Name: ChangeSetA
+              RoleArn:
+                Fn::GetAtt:
+                  - CodePipelineDeployChangeSetACodePipelineActionRole6B307874
+                  - Arn
+              RunOrder: 1
+            - ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: "1"
+              Configuration:
+                StackName: ServiceStackA
+                ActionMode: CHANGE_SET_EXECUTE
+                ChangeSetName: CDK-CodePipeline-ChangeSet
+              Name: ExecuteA
+              RoleArn:
+                Fn::GetAtt:
+                  - CodePipelineDeployExecuteACodePipelineActionRole3805F104
+                  - Arn
+              RunOrder: 2
+            - ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: "1"
+              Configuration:
+                StackName: ServiceStackB
+                Capabilities: CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND
+                RoleArn:
+                  Fn::GetAtt:
+                    - CodePipelineDeployChangeSetBRoleE9C8578C
+                    - Arn
+                ActionMode: CHANGE_SET_REPLACE
+                ChangeSetName: CDK-CodePipeline-ChangeSet
+                TemplatePath: Artifact_build_CodeBuild::ServiceStackB.template.json
+              InputArtifacts:
+                - Name: Artifact_build_CodeBuild
+              Name: ChangeSetB
+              RoleArn:
+                Fn::GetAtt:
+                  - CodePipelineDeployChangeSetBCodePipelineActionRoleAAB10335
+                  - Arn
+              RunOrder: 10
+            - ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: "1"
+              Configuration:
+                StackName: ServiceStackB
+                ActionMode: CHANGE_SET_EXECUTE
+                ChangeSetName: CDK-CodePipeline-ChangeSet
+              Name: ExecuteB
+              RoleArn:
+                Fn::GetAtt:
+                  - CodePipelineDeployExecuteBCodePipelineActionRole0D8FC087
+                  - Arn
+              RunOrder: 11
+          Name: Deploy
+      ArtifactStore:
+        EncryptionKey:
+          Id:
+            Fn::GetAtt:
+              - CodePipelineArtifactsBucketEncryptionKey85407CB4
+              - Arn
+          Type: KMS
+        Location:
+          Ref: CodePipelineArtifactsBucketF1E925CF
+        Type: S3
+      RestartExecutionOnUpdate: true
+    DependsOn:
+      - CodePipelineRoleDefaultPolicy8D520A8D
+      - CodePipelineRoleB3A660B4
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Resource
+  CodePipelinesourceGitHubWebhookResourceE85A4601:
+    Type: AWS::CodePipeline::Webhook
+    Properties:
+      Authentication: GITHUB_HMAC
+      AuthenticationConfiguration:
+        SecretToken: "{{resolve:secretsmanager:cdk-github-token:SecretString:cdk-github-token::}}"
+      Filters:
+        - JsonPath: $.ref
+          MatchEquals: refs/heads/{Branch}
+      TargetAction: GitHub
+      TargetPipeline:
+        Ref: CodePipelineB74E5936
+      TargetPipelineVersion: 1
+      RegisterWithThirdParty: true
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/source/GitHub/WebhookResource
+  CodePipelinebuildCodeBuildCodePipelineActionRole44373C60:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - ":iam::"
+                    - Ref: AWS::AccountId
+                    - :root
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/build/CodeBuild/CodePipelineActionRole/Resource
+  CodePipelinebuildCodeBuildCodePipelineActionRoleDefaultPolicyA3CDC7CB:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - codebuild:BatchGetBuilds
+              - codebuild:StartBuild
+              - codebuild:StopBuild
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodeBuild2FDE9E35
+                - Arn
+        Version: "2012-10-17"
+      PolicyName: CodePipelinebuildCodeBuildCodePipelineActionRoleDefaultPolicyA3CDC7CB
+      Roles:
+        - Ref: CodePipelinebuildCodeBuildCodePipelineActionRole44373C60
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/build/CodeBuild/CodePipelineActionRole/DefaultPolicy/Resource
+  CodePipelineSelfUpdateExecuteCodePipelineActionRoleFA57A2DA:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - ":iam::"
+                    - Ref: AWS::AccountId
+                    - :root
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/SelfUpdate/Execute/CodePipelineActionRole/Resource
+  CodePipelineSelfUpdateExecuteCodePipelineActionRoleDefaultPolicy2A0B0764:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - cloudformation:DescribeChangeSet
+              - cloudformation:DescribeStacks
+              - cloudformation:ExecuteChangeSet
+            Condition:
+              StringEqualsIfExists:
+                cloudformation:ChangeSetName: CDK-CodePipeline-ChangeSet
+            Effect: Allow
+            Resource:
+              Fn::Join:
+                - ""
+                - - "arn:"
+                  - Ref: AWS::Partition
+                  - ":cloudformation:"
+                  - Ref: AWS::Region
+                  - ":"
+                  - Ref: AWS::AccountId
+                  - :stack/CdkPipelineStack/*
+        Version: "2012-10-17"
+      PolicyName: CodePipelineSelfUpdateExecuteCodePipelineActionRoleDefaultPolicy2A0B0764
+      Roles:
+        - Ref: CodePipelineSelfUpdateExecuteCodePipelineActionRoleFA57A2DA
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/SelfUpdate/Execute/CodePipelineActionRole/DefaultPolicy/Resource
+  CodePipelineSelfUpdateChangeSetCodePipelineActionRole293482FD:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - ":iam::"
+                    - Ref: AWS::AccountId
+                    - :root
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/SelfUpdate/ChangeSet/CodePipelineActionRole/Resource
+  CodePipelineSelfUpdateChangeSetCodePipelineActionRoleDefaultPolicy9601ED9E:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action: iam:PassRole
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineSelfUpdateChangeSetRole3D91BC92
+                - Arn
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+            Effect: Allow
+            Resource:
+              - Fn::GetAtt:
+                  - CodePipelineArtifactsBucketF1E925CF
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - CodePipelineArtifactsBucketF1E925CF
+                        - Arn
+                    - /*
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineArtifactsBucketEncryptionKey85407CB4
+                - Arn
+          - Action:
+              - cloudformation:CreateChangeSet
+              - cloudformation:DeleteChangeSet
+              - cloudformation:DescribeChangeSet
+              - cloudformation:DescribeStacks
+            Condition:
+              StringEqualsIfExists:
+                cloudformation:ChangeSetName: CDK-CodePipeline-ChangeSet
+            Effect: Allow
+            Resource:
+              Fn::Join:
+                - ""
+                - - "arn:"
+                  - Ref: AWS::Partition
+                  - ":cloudformation:"
+                  - Ref: AWS::Region
+                  - ":"
+                  - Ref: AWS::AccountId
+                  - :stack/CdkPipelineStack/*
+        Version: "2012-10-17"
+      PolicyName: CodePipelineSelfUpdateChangeSetCodePipelineActionRoleDefaultPolicy9601ED9E
+      Roles:
+        - Ref: CodePipelineSelfUpdateChangeSetCodePipelineActionRole293482FD
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/SelfUpdate/ChangeSet/CodePipelineActionRole/DefaultPolicy/Resource
+  CodePipelineSelfUpdateChangeSetRole3D91BC92:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: cloudformation.amazonaws.com
+        Version: "2012-10-17"
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AdministratorAccess
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/SelfUpdate/ChangeSet/Role/Resource
+  CodePipelineDeployExecuteACodePipelineActionRole3805F104:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - ":iam::"
+                    - Ref: AWS::AccountId
+                    - :root
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Deploy/ExecuteA/CodePipelineActionRole/Resource
+  CodePipelineDeployExecuteACodePipelineActionRoleDefaultPolicyD2C13CEB:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - cloudformation:DescribeChangeSet
+              - cloudformation:DescribeStacks
+              - cloudformation:ExecuteChangeSet
+            Condition:
+              StringEqualsIfExists:
+                cloudformation:ChangeSetName: CDK-CodePipeline-ChangeSet
+            Effect: Allow
+            Resource:
+              Fn::Join:
+                - ""
+                - - "arn:"
+                  - Ref: AWS::Partition
+                  - ":cloudformation:"
+                  - Ref: AWS::Region
+                  - ":"
+                  - Ref: AWS::AccountId
+                  - :stack/ServiceStackA/*
+        Version: "2012-10-17"
+      PolicyName: CodePipelineDeployExecuteACodePipelineActionRoleDefaultPolicyD2C13CEB
+      Roles:
+        - Ref: CodePipelineDeployExecuteACodePipelineActionRole3805F104
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Deploy/ExecuteA/CodePipelineActionRole/DefaultPolicy/Resource
+  CodePipelineDeployChangeSetACodePipelineActionRole6B307874:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - ":iam::"
+                    - Ref: AWS::AccountId
+                    - :root
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Deploy/ChangeSetA/CodePipelineActionRole/Resource
+  CodePipelineDeployChangeSetACodePipelineActionRoleDefaultPolicy8377765B:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action: iam:PassRole
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineDeployChangeSetARoleBB3ED676
+                - Arn
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+            Effect: Allow
+            Resource:
+              - Fn::GetAtt:
+                  - CodePipelineArtifactsBucketF1E925CF
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - CodePipelineArtifactsBucketF1E925CF
+                        - Arn
+                    - /*
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineArtifactsBucketEncryptionKey85407CB4
+                - Arn
+          - Action:
+              - cloudformation:CreateChangeSet
+              - cloudformation:DeleteChangeSet
+              - cloudformation:DescribeChangeSet
+              - cloudformation:DescribeStacks
+            Condition:
+              StringEqualsIfExists:
+                cloudformation:ChangeSetName: CDK-CodePipeline-ChangeSet
+            Effect: Allow
+            Resource:
+              Fn::Join:
+                - ""
+                - - "arn:"
+                  - Ref: AWS::Partition
+                  - ":cloudformation:"
+                  - Ref: AWS::Region
+                  - ":"
+                  - Ref: AWS::AccountId
+                  - :stack/ServiceStackA/*
+        Version: "2012-10-17"
+      PolicyName: CodePipelineDeployChangeSetACodePipelineActionRoleDefaultPolicy8377765B
+      Roles:
+        - Ref: CodePipelineDeployChangeSetACodePipelineActionRole6B307874
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Deploy/ChangeSetA/CodePipelineActionRole/DefaultPolicy/Resource
+  CodePipelineDeployChangeSetARoleBB3ED676:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: cloudformation.amazonaws.com
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Deploy/ChangeSetA/Role/Resource
+  CodePipelineDeployChangeSetARoleDefaultPolicyE2B9DDA1:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+            Effect: Allow
+            Resource:
+              - Fn::GetAtt:
+                  - CodePipelineArtifactsBucketF1E925CF
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - CodePipelineArtifactsBucketF1E925CF
+                        - Arn
+                    - /*
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineArtifactsBucketEncryptionKey85407CB4
+                - Arn
+          - Action: "*"
+            Effect: Allow
+            Resource: "*"
+        Version: "2012-10-17"
+      PolicyName: CodePipelineDeployChangeSetARoleDefaultPolicyE2B9DDA1
+      Roles:
+        - Ref: CodePipelineDeployChangeSetARoleBB3ED676
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Deploy/ChangeSetA/Role/DefaultPolicy/Resource
+  CodePipelineDeployExecuteBCodePipelineActionRole0D8FC087:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - ":iam::"
+                    - Ref: AWS::AccountId
+                    - :root
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Deploy/ExecuteB/CodePipelineActionRole/Resource
+  CodePipelineDeployExecuteBCodePipelineActionRoleDefaultPolicyECC9A64E:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - cloudformation:DescribeChangeSet
+              - cloudformation:DescribeStacks
+              - cloudformation:ExecuteChangeSet
+            Condition:
+              StringEqualsIfExists:
+                cloudformation:ChangeSetName: CDK-CodePipeline-ChangeSet
+            Effect: Allow
+            Resource:
+              Fn::Join:
+                - ""
+                - - "arn:"
+                  - Ref: AWS::Partition
+                  - ":cloudformation:"
+                  - Ref: AWS::Region
+                  - ":"
+                  - Ref: AWS::AccountId
+                  - :stack/ServiceStackB/*
+        Version: "2012-10-17"
+      PolicyName: CodePipelineDeployExecuteBCodePipelineActionRoleDefaultPolicyECC9A64E
+      Roles:
+        - Ref: CodePipelineDeployExecuteBCodePipelineActionRole0D8FC087
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Deploy/ExecuteB/CodePipelineActionRole/DefaultPolicy/Resource
+  CodePipelineDeployChangeSetBCodePipelineActionRoleAAB10335:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              AWS:
+                Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - ":iam::"
+                    - Ref: AWS::AccountId
+                    - :root
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Deploy/ChangeSetB/CodePipelineActionRole/Resource
+  CodePipelineDeployChangeSetBCodePipelineActionRoleDefaultPolicyDC4DC6CF:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action: iam:PassRole
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineDeployChangeSetBRoleE9C8578C
+                - Arn
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+            Effect: Allow
+            Resource:
+              - Fn::GetAtt:
+                  - CodePipelineArtifactsBucketF1E925CF
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - CodePipelineArtifactsBucketF1E925CF
+                        - Arn
+                    - /*
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineArtifactsBucketEncryptionKey85407CB4
+                - Arn
+          - Action:
+              - cloudformation:CreateChangeSet
+              - cloudformation:DeleteChangeSet
+              - cloudformation:DescribeChangeSet
+              - cloudformation:DescribeStacks
+            Condition:
+              StringEqualsIfExists:
+                cloudformation:ChangeSetName: CDK-CodePipeline-ChangeSet
+            Effect: Allow
+            Resource:
+              Fn::Join:
+                - ""
+                - - "arn:"
+                  - Ref: AWS::Partition
+                  - ":cloudformation:"
+                  - Ref: AWS::Region
+                  - ":"
+                  - Ref: AWS::AccountId
+                  - :stack/ServiceStackB/*
+        Version: "2012-10-17"
+      PolicyName: CodePipelineDeployChangeSetBCodePipelineActionRoleDefaultPolicyDC4DC6CF
+      Roles:
+        - Ref: CodePipelineDeployChangeSetBCodePipelineActionRoleAAB10335
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Deploy/ChangeSetB/CodePipelineActionRole/DefaultPolicy/Resource
+  CodePipelineDeployChangeSetBRoleE9C8578C:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: cloudformation.amazonaws.com
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Deploy/ChangeSetB/Role/Resource
+  CodePipelineDeployChangeSetBRoleDefaultPolicy672A4E25:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+            Effect: Allow
+            Resource:
+              - Fn::GetAtt:
+                  - CodePipelineArtifactsBucketF1E925CF
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - CodePipelineArtifactsBucketF1E925CF
+                        - Arn
+                    - /*
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineArtifactsBucketEncryptionKey85407CB4
+                - Arn
+          - Action: "*"
+            Effect: Allow
+            Resource: "*"
+        Version: "2012-10-17"
+      PolicyName: CodePipelineDeployChangeSetBRoleDefaultPolicy672A4E25
+      Roles:
+        - Ref: CodePipelineDeployChangeSetBRoleE9C8578C
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodePipeline/Deploy/ChangeSetB/Role/DefaultPolicy/Resource
+  CodeBuildRoleE9A44575:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: codebuild.amazonaws.com
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodeBuild/Role/Resource
+  CodeBuildRoleDefaultPolicy196BAF24:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - logs:CreateLogGroup
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Effect: Allow
+            Resource:
+              - Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - ":logs:"
+                    - Ref: AWS::Region
+                    - ":"
+                    - Ref: AWS::AccountId
+                    - :log-group:/aws/codebuild/
+                    - Ref: CodeBuild2FDE9E35
+              - Fn::Join:
+                  - ""
+                  - - "arn:"
+                    - Ref: AWS::Partition
+                    - ":logs:"
+                    - Ref: AWS::Region
+                    - ":"
+                    - Ref: AWS::AccountId
+                    - :log-group:/aws/codebuild/
+                    - Ref: CodeBuild2FDE9E35
+                    - :*
+          - Action:
+              - codebuild:CreateReportGroup
+              - codebuild:CreateReport
+              - codebuild:UpdateReport
+              - codebuild:BatchPutTestCases
+            Effect: Allow
+            Resource:
+              Fn::Join:
+                - ""
+                - - "arn:"
+                  - Ref: AWS::Partition
+                  - ":codebuild:"
+                  - Ref: AWS::Region
+                  - ":"
+                  - Ref: AWS::AccountId
+                  - :report-group/
+                  - Ref: CodeBuild2FDE9E35
+                  - -*
+          - Action:
+              - s3:GetObject*
+              - s3:GetBucket*
+              - s3:List*
+              - s3:DeleteObject*
+              - s3:PutObject*
+              - s3:Abort*
+            Effect: Allow
+            Resource:
+              - Fn::GetAtt:
+                  - CodePipelineArtifactsBucketF1E925CF
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - CodePipelineArtifactsBucketF1E925CF
+                        - Arn
+                    - /*
+          - Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+              - kms:Encrypt
+              - kms:ReEncrypt*
+              - kms:GenerateDataKey*
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineArtifactsBucketEncryptionKey85407CB4
+                - Arn
+          - Action:
+              - kms:Decrypt
+              - kms:Encrypt
+              - kms:ReEncrypt*
+              - kms:GenerateDataKey*
+            Effect: Allow
+            Resource:
+              Fn::GetAtt:
+                - CodePipelineArtifactsBucketEncryptionKey85407CB4
+                - Arn
+        Version: "2012-10-17"
+      PolicyName: CodeBuildRoleDefaultPolicy196BAF24
+      Roles:
+        - Ref: CodeBuildRoleE9A44575
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodeBuild/Role/DefaultPolicy/Resource
+  CodeBuild2FDE9E35:
+    Type: AWS::CodeBuild::Project
+    Properties:
+      Artifacts:
+        Type: CODEPIPELINE
+      Environment:
+        ComputeType: BUILD_GENERAL1_SMALL
+        EnvironmentVariables:
+          - Name: LAMBDA_CODE_BUCKET
+            Type: PLAINTEXT
+            Value: testhomework
+          - Name: CODE_PATH
+            Type: PLAINTEXT
+            Value: ./hello/lambda_code
+          - Name: SOURCE_BUNDLE_NAME
+            Type: PLAINTEXT
+            Value: cdk_pipeline_function.zip
+          - Name: LAMBDA_FUNCTION_FILENAME_A
+            Type: PLAINTEXT
+            Value: lambda_function_a.py
+          - Name: LAMBDA_FUNCTION_FILENAME_B
+            Type: PLAINTEXT
+            Value: lambda_function_b.py
+        Image: aws/codebuild/standard:1.0
+        PrivilegedMode: false
+        Type: LINUX_CONTAINER
+      ServiceRole:
+        Fn::GetAtt:
+          - CodeBuildRoleE9A44575
+          - Arn
+      Source:
+        Type: CODEPIPELINE
+      EncryptionKey:
+        Fn::GetAtt:
+          - CodePipelineArtifactsBucketEncryptionKey85407CB4
+          - Arn
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/CodeBuild/Resource
+  MyS3AccessPolicyAED031B7:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action: s3:*
+            Effect: Allow
+            Resource:
+              - arn:aws:s3:::testhomework
+              - arn:aws:s3:::testhomework/*
+        Version: "2012-10-17"
+      PolicyName: MyS3AccessPolicyAED031B7
+      Roles:
+        - Ref: CodeBuildRoleE9A44575
+    Metadata:
+      aws:cdk:path: CdkPipelineStack/MyS3AccessPolicy/Resource
+  CDKMetadata:
+    Type: AWS::CDK::Metadata
+    Properties:
+      Modules: aws-cdk=1.46.0,@aws-cdk/app-delivery=1.45.0,@aws-cdk/assets=1.45.0,@aws-cdk/aws-apigateway=1.45.0,@aws-cdk/aws-applicationautoscaling=1.45.0,@aws-cdk/aws-autoscaling=1.45.0,@aws-cdk/aws-autoscaling-common=1.45.0,@aws-cdk/aws-autoscaling-hooktargets=1.45.0,@aws-cdk/aws-batch=1.45.0,@aws-cdk/aws-certificatemanager=1.45.0,@aws-cdk/aws-cloudformation=1.45.0,@aws-cdk/aws-cloudfront=1.45.0,@aws-cdk/aws-cloudwatch=1.45.0,@aws-cdk/aws-codebuild=1.45.0,@aws-cdk/aws-codecommit=1.45.0,@aws-cdk/aws-codedeploy=1.45.0,@aws-cdk/aws-codepipeline=1.45.0,@aws-cdk/aws-codepipeline-actions=1.45.0,@aws-cdk/aws-cognito=1.45.0,@aws-cdk/aws-ec2=1.45.0,@aws-cdk/aws-ecr=1.45.0,@aws-cdk/aws-ecr-assets=1.45.0,@aws-cdk/aws-ecs=1.45.0,@aws-cdk/aws-elasticloadbalancing=1.45.0,@aws-cdk/aws-elasticloadbalancingv2=1.45.0,@aws-cdk/aws-events=1.45.0,@aws-cdk/aws-events-targets=1.45.0,@aws-cdk/aws-iam=1.45.0,@aws-cdk/aws-kinesis=1.45.0,@aws-cdk/aws-kms=1.45.0,@aws-cdk/aws-lambda=1.45.0,@aws-cdk/aws-logs=1.45.0,@aws-cdk/aws-route53=1.45.0,@aws-cdk/aws-route53-targets=1.45.0,@aws-cdk/aws-s3=1.45.0,@aws-cdk/aws-s3-assets=1.45.0,@aws-cdk/aws-sam=1.45.0,@aws-cdk/aws-secretsmanager=1.45.0,@aws-cdk/aws-servicediscovery=1.45.0,@aws-cdk/aws-sns=1.45.0,@aws-cdk/aws-sns-subscriptions=1.45.0,@aws-cdk/aws-sqs=1.45.0,@aws-cdk/aws-ssm=1.45.0,@aws-cdk/aws-stepfunctions=1.45.0,@aws-cdk/cdk-assets-schema=1.45.0,@aws-cdk/cloud-assembly-schema=1.45.0,@aws-cdk/core=1.45.0,@aws-cdk/custom-resources=1.45.0,@aws-cdk/cx-api=1.45.0,@aws-cdk/region-info=1.45.0,jsii-runtime=Python/3.7.7
+    Condition: CDKMetadataAvailable
+Conditions:
+  CDKMetadataAvailable:
+    Fn::Or:
+      - Fn::Or:
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-east-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-northeast-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-northeast-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-south-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-southeast-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ap-southeast-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - ca-central-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - cn-north-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - cn-northwest-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-central-1
+      - Fn::Or:
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-north-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-west-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-west-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - eu-west-3
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - me-south-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - sa-east-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-east-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-east-2
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-west-1
+          - Fn::Equals:
+              - Ref: AWS::Region
+              - us-west-2
 

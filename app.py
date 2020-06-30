@@ -88,26 +88,6 @@ self_update_stage.add_action(cicd.PipelineDeployStackAction(
     admin_permissions=True
 ))
 
-'''
-### Since the original CFN service role for CdkPipelineStack doesn't have permission to delete roles, add it as a workaround. If I didn't add it into this solution, the stack deletion would be failed because the role doesn't have the permission to delete roles. However, if I add the permission via console, the stack deletion would be failed as well, because this role was also created within this stack. So the out-of-band added policy is not allowed when deleting the stack.
-addDeleteRolePolicy = iam.Policy(pipeline_stack, "DeleteRolePolicy",
-    roles = [
-        pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role')
-    ]
-).add_statements(
-    iam.PolicyStatement(
-        actions = [
-            'iam:DeleteRole'
-        ],
-        effect = iam.Effect.ALLOW,
-        resources = [
-            '*'
-        ]
-    )
-)
-### End of this no iam:DeleteRole permission workaround
-'''
-
 deploy_stage = pipeline.add_stage(stage_name="Deploy")
 #service_stack_a = MyServiceStackA(app, "ServiceStackA")
 service_stack_a = MyServiceStackA(app, "ServiceStackA", SOURCE_BUNDLE_NAME, LAMBDA_FUNCTION_FILENAME_A, LAMBDA_CODE_BUCKET)
@@ -133,6 +113,26 @@ deploy_service_bAction = cicd.PipelineDeployStackAction(
 )
 deploy_stage.add_action(deploy_service_bAction)
 
+### Since the original CFN service role for CdkPipelineStack will "be attached" to a default policy, it will delete the policy before deleting the role. Hence, there will show that the stack's role doesn't have permission to delete some resources. From my investigation, there's no way to change the default policy which is an inline policy to workaround the issue. Due to the original default policy is also using the admin permission, I add a new ManagedPolicy with admin permission and attach this policy into a role as a workaround.
+'''
+cdkpipelinestack_default_policy = pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role').node.try_find_child('DefaultPolicy')
+cfn_cdkpipelinestack_default_policy = cdkpipelinestack_default_policy.node.default_child
+print(cfn_cdkpipelinestack_default_policy.add_property_override)
+cfn_cdkpipelinestack_default_policy.add_property_override(
+    property_path = 'Roles',
+    value = core.Aws.NO_VALUE 
+) # remove the original refernece. So the previous inline policy won't attach the role on it. 
+'''
+pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role').node.try_remove_child('DefaultPolicy')
+
+# add a new ManagedPolicy with 'arn:aws:iam::aws:policy/AdministratorAccess'
+admin_policy = iam.ManagedPolicy.from_managed_policy_arn(pipeline_stack, 'adminPolicy','arn:aws:iam::aws:policy/AdministratorAccess')
+
+# get the Role and add the managed policy to it.
+cdkpipelinestack_role = pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role')
+cdkpipelinestack_role.add_managed_policy(admin_policy)
+### End of this role/policy deletion order issue's workaround
+
 ### Debugging (print out the object's information to see what can I do.)
 '''
 for obj in pipeline.node.find_all():
@@ -144,6 +144,12 @@ for obj in pipeline.node.find_all():
         pass
     print('-------------------')
 '''
+# CodePipelineSelfUpdateChangeSetRoleDefaultPolicy80A79752
+# CdkPipelineStack.CodePipeline.SelfUpdate.ChangeSet.Role.DefaultPolicy.Resource.LogicalID.127
+#print(pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role'))
+#print(dir(pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role')))
+#print(pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role').node.try_find_child('DefaultPolicy').node.default_child)
+#print(dir(pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role').node.try_find_child('DefaultPolicy').node.default_child))
 # CdkPipelineStack.CodePipeline.SelfUpdate.ChangeSet.Role.Resource.LogicalID.117
 #print(pipeline.node.try_find_child('SelfUpdate').node.try_find_child('ChangeSet').node.try_find_child('Role'))
 # CdkPipelineStack.CodePipeline.build.CodeBuild.CodePipelineActionRole.Resource.LogicalID.78
